@@ -1,0 +1,67 @@
+/*************************************************************
+ * Author : Bihela wanasekara Curtin ID : 20530930
+ * Date : 9/23/2021
+ * Purpose:Data class qesudo code
+ * ***********************************************************/
+class Date
+
+    Class fields:
+	                dayOfMonth(int)
+	                monthOfYear(int)
+	                year(int)
+
+    Class Methods:
+	    CONSTRUCTOR with PARAMETER
+	    IMPORT: pdayofMonth(int), pmonthofYear(int), pyear(int)
+	EXPORT: none
+	ASSERTION: Created object with imported values 
+	ALGORITHM: 
+		dayofMonth= pdayofMonth 
+		monthofYear= pmonthofYear
+		year= pyear
+
+ 	ACCESSOR: getdayofMonth
+	IMPORT: none
+	EXPORT: dayofMonth(int) 
+	ASSERTION: Return the dayofMonth 
+	ALGORITHM: 
+		   RETURN COPY OF dayofMonth
+
+	ACCESSOR: getmonthofYear 
+	IMPORT: none
+	EXPORT: monthofYear(int) 
+	ASSERTION: Return the monthofYear
+	ALGORITHM: 
+		   RETURN COPY OF monthofYear
+
+	ACCESSOR: getyear
+	IMPORT: none
+	EXPORT: year(int) 
+	ASSERTION: Return the year
+	ALGORITHM: 
+		   RETURN COPY OF year
+
+	MUTATOR: setdayofMonth
+	IMPORT: pdayofMonth(int)
+	EXPORT: none
+	ASSERTION: State of dayofMonth is updated to pdayMonth value 
+	ALGORITHM: 
+		   dayofMonth= pdayofMonth 
+
+	MUTATOR: setmonthofYear
+	IMPORT: pmonthofYear(int)
+	EXPORT: none
+	ASSERTION: State of monthofYear is updated to pmonthofYear value 
+	ALGORITHM: 
+		   monthofYear= pmonthofYear 
+
+	MUTATOR: setyear
+	IMPORT: pyear(int)
+	EXPORT: none
+	ASSERTION: State of year is updated to pyear value 
+	ALGORITHM: 
+		   year= pyear
+	
+			      
+
+

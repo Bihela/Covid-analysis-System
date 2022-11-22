@@ -1,0 +1,208 @@
+Begin
+	Main
+	    Call mainMenu
+    End Main
+
+METHOD: mainMenu
+IMPORT: none
+EXPORT: none
+Algorithm:
+		
+        OUTPUT "Welcome to the COVID-19 Data Analysis Program. Make a selection from the menu below regarding the information you would like to see.");
+        OUTPUT "Please select from the menu below"
+        OUTPUT "> 1. Statistic of entire nation"
+        OUTPUT "> 2. Statistic or regions"
+        OUTPUT "> 3. Exit the program."
+        OUTPUT "Your choice = "
+		switch option
+			case 1:
+				option1
+			breaK
+
+			case 2:
+				option2
+			break
+
+			case 3:
+				OUTPUT "Exiting now"
+			break
+
+			default:
+			         OUTPUT "Sorry incorrect option"
+
+METHOD: option1
+IMPORT: none
+EXPORT: none
+Algorithm:
+
+    	 ASSIGN ARRAY -> ageGroup = {"0-9","10-19","20-29","30-39","40-49","50-59","60-69","70-79","80-89","90+"};//all required arrays
+        ASSIGN ARRAY -> sexGroup = {"M" , "F"};
+    	OUTPUT "Statistics for the entire nation: Select from the menu below:"
+        OUTPUT ">1. Display the total number of COVID-19 cases"
+        OUTPUT ">2. Display the number of COVID-19 cases: Males."
+        OUTPUT ">3. Display the number of COVID-19 cases: Females."
+        OUTPUT ">4. Display the number of COVID-19 Cases: 0-9 age group."
+        OUTPUT ">5. Display the number of COVID-19 Cases: 10-19 age Group. "
+        OUTPUT ">6. Display the number of COVID-19 Cases: 20-29 age group. "
+        OUTPUT ">7. Display the number of COVID-19 Cases: 30-39 age group. "
+        OUTPUT ">8. Display the number of COVID-19 Cases: 40-49 age group. "
+        OUTPUT ">9. Display the number of COVID-19 Cases: 50-59 age group. "
+        OUTPUT ">10. Display the number of COVID-19 Cases: 60-69 age group. "
+        OUTPUT ">11. Display the number of COVID-19 Cases: 70-79 age group. "
+        OUTPUT ">12. Display the number of COVID-19 Cases: 80-89 age group. "
+        OUTPUT ">13. Display the number of COVID-19 Cases: 90+ age group. "
+        OUTPUT "Your choice:"
+        if ( choose1 == 1)
+             OUTPUT "Total number of cases =101114 "
+        if ( choose1 == 2)
+           displayDatasex(sexGroup[choose1-2])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 3)
+           displayDatasex(sexGroup[choose1-2])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 4)
+            displayData(ageGroup[choose1-4])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD   
+        if ( choose1 == 5)
+           displayData(ageGroup[choose1-5])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 6)
+           displayData(ageGroup[choose1-5])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 7)
+           displayData(ageGroup[choose1-5])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 8)
+           displayData(ageGroup[choose1-5])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 9)
+           displayData(ageGroup[choose1-5])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 10)
+           displayData(ageGroup[choose1-5])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 11)
+           displayData(ageGroup[choose1-5])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 12)
+           displayData(ageGroup[choose1-5])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+        if ( choose1 == 13)
+           displayData(ageGroup[choose1-5])<- SEND THE SPECIFIED ARRAY TO THE MEATHOD
+
+        OUTPUT "Would you like to make another selection (Y or N)? "
+        if ( repeat == 'Y' )
+            option1<- CALL THE MEATHOD
+        if ( repeat == 'N' )
+            mainMenu<- CALL THE MEATHOD
+METHOD: displayData
+IMPORT: String ageGroup
+EXPORT: none 
+ALgorithm:   	
+    	 
+    	parsing a CSV file into BufferedReader class constructor  
+    		Spliit the Data
+    			
+    			if(AgeGroup compare ageGroup ==0)
+    				countage = countage + 1
+            OUTPUT "Total number of cases"
+
+METHOD: displayDatadex
+IMPORT: String sexGroup
+EXPORT: none
+Algorithm: 
+    	  
+    	parsing a CSV file into BufferedReader class constructor  
+    	     Spilt the data
+    			
+                if(sex compareTo sexGroup ==0) 
+                    countsex = countersex + 1
+                   
+            OUTPUT"Total number of cases = " 
+
+METHOD: option2
+IMPORT: none
+EXPORT: none
+Algorithm:
+        regionGroup = {"Flanders","Brussels","Wallonia","NA"}<-Assign Arrays
+        sexGroup = {"M" , "F"}<-Assign Arrays}<-Assign Arrays
+        ageGroup = {"0-9","10-19","20-29","30-39","40-49","50-59","60-69","70-79","80-89","90+"}<-Assign Arrays
+        OUTPUT "Statistic by the Region: select from the menu below:"
+        OUTPUT "Which region would you like statistic for?"
+        OUTPUT "1. Flanders"
+        OUTPUT "2. Brussels"
+        OUTPUT "3. Wallonia"
+        OUTPUT "4. Unknown"
+        OUTPUT "Your choice : "
+        if(choose2 == 1)
+            displayDataregion(regionGroup[choose2-1],sexGroup[choose2-1])
+            displayDataregion(regionGroup[choose2-1],sexGroup[choose2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-1])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+1])      <-SEND THE SPECIFIED ARRAYS TO THE MEATHOD
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+3])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+4])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+5])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+6])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+7])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+8])
+        if(choose2 == 2)
+            displayDataregion(regionGroup[choose2-1],sexGroup[choose2-2])
+            displayDataregion(regionGroup[choose2-1],sexGroup[choose2-1])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-1])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+1]
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+2])       <-SEND THE SPECIFIED ARRAYS TO THE MEATHOD
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+3])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+4])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+5])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+6])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+7])
+        if(choose2 == 3)
+            displayDataregion(regionGroup[choose2-1],sexGroup[choose2-3])
+            displayDataregion(regionGroup[choose2-1],sexGroup[choose2-2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-3])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-1])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2])       <-SEND THE SPECIFIED ARRAYS TO THE MEATHOD
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+1])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+3])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+4])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+5])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+6])
+        if(choose2 == 4)
+            displayDataregion(regionGroup[choose2-1],sexGroup[choose2-4])
+            displayDataregion(regionGroup[choose2-1],sexGroup[choose2-3])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-4])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-3])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2-1])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2])           <-SEND THE SPECIFIED ARRAYS TO THE MEATHOD
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+1])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+2])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+3])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+4])
+            displayDataregion1(regionGroup[choose2-1],ageGroup[choose2+5])
+        OUTPUT "Would you like to make another selection (Y or N)? "
+        if ( repeat == 'Y' )
+            option2<- CALL MEATHOD
+        if ( repeat == 'N' )
+            mainMenu <-  CALL MEATHOD
+
+METHOD: displayDataregion
+IMPORT: String regionGroup, String SexGroup
+EXPORT: none
+Algorithm :       
+    	parsing a CSV file into BufferedReader class constructor  
+            Spliit the Data
+
+    			if(Region compare ==0 and sex compare == 0) 
+                        countsex1 = countsex1 +1
+                    
+            OUTPUT "Total number of cases is = " 
+
+METHOD: displayDataregion1
+IMPORT: String regionGroup, String ageGroup
+EXPORT: none
+Algorithm:
+ 
+    	parsing a CSV file into BufferedReader class constructor  
+    		Spliit the Data
+    		
+    			if(Region compare ==0 & AgeGroup compare == 0) 
+                        countage1 = countage1 + 1
+                OUTPUT "Total number of cases is = "
+End
+   

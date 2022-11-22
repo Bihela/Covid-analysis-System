@@ -1,0 +1,137 @@
+/*************************************************************
+ * Author : Bihela wanasekara Curtin ID : 20530930
+ * Date : 9/23/2021
+ * Purpose: CovidCase class pseudocode
+ * ***********************************************************/
+ class CovidCase
+    Class fields:
+	                Country (String)
+	                Province (String)
+	                Region (String)
+                    AgeGroup (String)
+                    sex (String)
+                    Cases (String)
+                    theDate (String)
+Class Methods:
+	Constructor with parameter
+    IMPORT:
+            pCountry(String)
+            pProvince(String)
+            pRegion(String)
+            pAgeGroup (String)
+            psex (String)
+            pCases (String)
+            ptheDate (String)
+    Export:
+            none
+    Assertion:
+            Created object with imported values
+    Algorithm:     
+		    Country = pCountry
+		    Province = pProvince
+		    Region = pRegion
+            AgeGroup = pAgeGroup
+            sex = psex
+            Cases = pCases
+            theDate = ptheDate
+
+    Accessor: getCountry
+	IMPORT: none
+	EXPORT: Country(String) 
+	ASSERTION: Return the Country 
+	ALGORITHM: 
+		   RETURN COPY OF Country
+
+	ACCESSOR: getProvince
+	IMPORT: none
+	EXPORT: Province(String) 
+	ASSERTION: Return the Province 
+	ALGORITHM: 
+		   RETURN COPY OF Province
+
+	ACCESSOR: getRegion 
+	IMPORT: none
+	EXPORT: Region(String) 
+	ASSERTION: Return the Region 
+	ALGORITHM: 
+		   RETURN COPY OF Region
+
+	ACCESSOR: getAgeGroup 
+	IMPORT: none
+	EXPORT: AgeGroup(String) 
+	ASSERTION: Return the AgeGroup 
+	ALGORITHM: 
+		   RETURN COPY OF AgeGroup
+
+	ACCESSOR: getsex
+	IMPORT: none
+	EXPORT: sex(String) 
+	ASSERTION: Return the sex 
+	ALGORITHM: 
+		   RETURN COPY OF sex
+
+	ACCESSOR: getCases
+	IMPORT: none
+	EXPORT: Cases(String) 
+	ASSERTION: Return the Cases
+	ALGORITHM: 
+		   RETURN COPY OF Cases
+
+	ACCESSOR: gettheDate 
+	IMPORT: none
+	EXPORT: theDate(String) 
+	ASSERTION: Return the theDate 
+	ALGORITHM: 
+		   RETURN COPY OF theDate         
+	MUTATOR: setCountry
+	IMPORT: pCountry(String)
+	EXPORT: none
+	ASSERTION: State of Country is updated to pCountry value 
+	ALGORITHM: 
+		   Country= pCountry 
+
+	MUTATOR: setProvince
+	IMPORT: pProvince(String)
+	EXPORT: none
+	ASSERTION: State of Province is updated to pProvince value 
+	ALGORITHM: 
+		   Province= pProvince
+
+	MUTATOR: setRegion
+	IMPORT: pRegion(String)
+	EXPORT: none
+	ASSERTION: State of Region is updated to pRegion value 
+	ALGORITHM: 
+		   Region= pRegion 
+
+	MUTATOR: setAgeGroup
+	IMPORT: pAgeGroup(String)
+	EXPORT: none
+	ASSERTION: State of SetGroup is updated to pSetGroup value 
+	ALGORITHM: 
+		   SetGroup= pSetGroup 
+
+	MUTATOR: setsex
+	IMPORT: psex(String)
+	EXPORT: none
+	ASSERTION: State of sex is updated to psex value 
+	ALGORITHM: 
+		   sex= psex
+
+	MUTATOR: setCases
+	IMPORT: pCases(String)
+	EXPORT: none
+	ASSERTION: State of Cases is updated to pCases value 
+	ALGORITHM: 
+		   Cases= pCases
+
+	MUTATOR: settheDate
+	IMPORT: ptheDate(String)
+	EXPORT: none
+	ASSERTION: State of theDate is updated to ptheDate value 
+	ALGORITHM: 
+		   theDate= ptheDate
+	
+			      
+
+
